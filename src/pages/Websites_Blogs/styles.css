@@ -1,0 +1,47 @@
+.WebsitesBlogs_Row01_Col01 h4 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 4rem;
+    color: var(--color-title-in-primary-dark);
+}
+
+#Button, .mailButton {
+    background-color: var(--color-primary-dark) !important;
+    width: 200px;
+    height: 36px;
+}
+
+#Button:hover , .mailButton:hover{
+    background-color: var(--color-primary-lighter) !important;
+}
+
+#Button a, .mailButton a , .servicesButtons button a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--color-text-in-primary) !important;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.descriptionTitle {
+    font-size: 1.6rem;
+    font-weight: 700;   
+    color: var(--color-title-in-primary);
+    text-align: center;
+    margin-top: 3.1rem;
+}
+
+.shadowContainer {
+    box-shadow: 5px 5px 5px 1px var(--color-box-shadow-light);
+}
+
+.shadowContainer p {
+    margin: 0.3rem 2rem;
+}
+
+.servicesButtons button {
+    width: 300px;
+    height: 3.7rem;
+    margin: 1rem 2rem;
+    box-shadow: 5px 5px 5px 1px var(--color-box-shadow);
+}

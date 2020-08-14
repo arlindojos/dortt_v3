@@ -1,0 +1,68 @@
+.title{
+    font-size: 2.9rem;
+    font-weight: 700;   
+    color: var(--color-title-in-primary);
+}
+
+.shadowContainer {
+    box-shadow: 5px 5px 5px 1px var(--color-box-shadow);
+}
+.shadowContainer div {
+    margin: 0 10px;
+    padding: 0 1.2rem;
+}
+#title {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.Button {
+    background-color: var(--color-primary-dark) !important;
+    width: 200px;
+    height: 36px;
+}
+
+.Button:hover {
+    background-color: var(--color-primary-lighter) !important;
+}
+
+.Button a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--color-text-in-primary) !important;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.button-optimize {
+    margin-top: 50px;
+}
+
+.buttonWebsite {
+    margin-top: 30px;
+}
+
+#JumbotronID {
+    background-color: var(--color-box-base) !important;    
+}
+
+#JumbotronID > div {
+    padding: 30px 30px;
+}
+
+#JumbotronID h5 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-title-in-primary-dark);
+}
+
+@media only screen and (max-width: 1067px) {
+    .Button {
+        height: auto;
+    }
+    
+    .shadowContainer .text-center {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,55 @@
+#container-blockContact {
+    margin-top: 5rem;
+}
+
+#HaveEmailSent {
+    max-width: 20rem;
+    padding: 15rem 2rem;
+    opacity: 0.8;
+}
+
+#HaveEmailSent02 {
+    display: none;
+}
+
+#container-blockContact form {
+    border-radius: 0.8rem;
+    padding: 10rem 0rem;
+}
+
+#container-blockContact form button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 200px;
+    height: 36px;
+    background-color: var(--color-primary-dark) !important;
+    color: var(--color-text-in-primary) !important;
+    font-size: 1.6rem;
+    margin-top: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #HaveEmailSent {
+        padding: 0 2rem;
+        margin-left: 2rem;
+    }
+
+    #container-blockContact img {
+        margin-bottom: 4rem;
+    }
+
+    #container-blockContact form {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #HaveEmailSent {
+        display: none;
+    }
+
+    #HaveEmailSent02 {
+        display: block;
+        padding: 5rem 10rem;
+    }
+}

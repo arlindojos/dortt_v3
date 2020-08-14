@@ -1,0 +1,30 @@
+.mailButton {
+    background-color: var(--color-primary-dark) !important;
+    width: 200px;
+    height: 36px;
+}
+
+.mailButton:hover{
+    background-color: var(--color-primary-lighter) !important;
+}
+
+.mailButton a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--color-text-in-primary) !important;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.main-Mail {
+    background-color: var(--color-background-light);
+    margin: 3rem 0 7rem;
+}
+
+.main-Mail div {
+    margin: 4rem 2.5rem;
+}
+
+.main-Mail div h1 {
+    font-size: 3.2rem;
+}

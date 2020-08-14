@@ -1,0 +1,70 @@
+.LogoRow01Col01 img {
+    margin-top: 50px;
+}
+
+.LogoRow01Col01 div {
+    text-align: center;
+}
+
+.LogoRow01Col01 div button {
+    width: 300px;
+    height: 36px;
+    margin: 0.8rem;
+    box-shadow: 5px 5px 5px 1px var(--color-box-shadow);
+
+}
+
+.LogoRow01Col01 div button a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--color-text-in-primary) !important;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.LogoRow01Col02 {
+    margin: 5rem 0 0 2rem;
+}
+
+.LogoRow01Col02 h1 {
+    font-size: 3.4rem;
+}
+
+.LogoRow01Col02 p a {
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 0.7rem;
+}
+
+.LogoRow01Col02 p a span {
+    margin-right: 0.2rem;
+}
+
+.Logo-Row02-Col01 > img {
+    margin-top: 5rem;
+}
+
+.Logo-Row02-Col01 div {
+    text-align: center;
+}
+
+.Logo-Row02-Col01 div img {
+    max-width:250px;
+}
+
+.Logo-Row02-Col01 p {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.Logo-Row02-Col02 div {
+    background-color: var(--color-box-base);
+    margin-top: 5rem;
+    margin-left: 2rem;
+    border-radius: 0.2rem;
+}
+
+.Logo-Row02-Col02 div img {
+    padding: 6rem 3.2rem;
+}
+
