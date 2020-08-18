@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
-import LogoImg from '../../assets/images/logop.svg';
+import LogoImg from '../../assets/images/logo_v3.svg';
 
 import './styles.css';
 
@@ -21,23 +21,23 @@ const Footer = () => {
                     <Col md={3} className="footerColon01">
                         <div>
                             <a href="/about_us"><strong>Porquê a Dortt?</strong></a>
-                            <a href="/services/websites_blogs">O que é Web Design?</a>
+                            <a href="/services/Websites-and-Blogs">O que é Web Design?</a>
                             <Image src={LogoImg} alt="Dortt" fluid />
                         </div>
                     </Col>
 
                     <Col md={3} className="footerColon01" >
                         <span><strong>Serviços</strong></span>
-                        <a href="/services/websites_blogs">Website</a>
-                        <a href="/services/websites_blogs">Blog</a>
+                        <a href="/services/Websites-and-Blogs">Website</a>
+                        <a href="/services/Websites-and-Blogs">Blog</a>
                         <a href="/services/logos">Logo</a>
                         <a href="/services/websites_blogs">Email Profissional</a>
-                        <a href="services/contact">Otimização de Website</a>
+                        <a href="/Optimize-Your-Website">Otimização de Website</a>
                     </Col>
 
                     <Col md={3} className="footerColon01">
                         <span><strong>Cliente</strong></span>
-                        <a href="log_in">Sua conta</a>
+                        <a href="/log_in">Sua conta</a>
                         <a href="/sign_up">Inscreva-se</a>
                         <a href="/contact">Ajuda</a>
                     </Col>

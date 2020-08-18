@@ -29,6 +29,7 @@
     color: var(--color-title-in-primary);
     text-align: center;
     margin-top: 3.1rem;
+    text-transform: uppercase;
 }
 
 .shadowContainer {

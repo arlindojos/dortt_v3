@@ -61,7 +61,7 @@ const WebsitesBlogs = () => {
                 </Row>
                 <Row className="mt-5">
                     <Col md={3} className="shadowContainer">
-                        <p className="descriptionTitle">FÁCIL E INTUITIVO</p>
+                        <p className="descriptionTitle">Fácil e intuitivo</p>
                         <p>
                             Escolha o tema relacionado ao seu projeto, informações da sua empresa, produtos e serviços e
                             imagens, nos trabalhamos o seu Website.
@@ -69,7 +69,7 @@ const WebsitesBlogs = () => {
                     </Col>
 
                     <Col md={3} className="shadowContainer">
-                        <p className="descriptionTitle">CONTAS DE E-MAIL</p>
+                        <p className="descriptionTitle">Contas de E-mail</p>
                         <p>
                             Crie contas de e-mail profissional e personalizadas com seu domínio, mais credibilidade ao seu
                             negócio,
@@ -79,7 +79,7 @@ const WebsitesBlogs = () => {
                     </Col>
 
                     <Col md={3} className="shadowContainer">
-                        <p className="descriptionTitle">MODELOS RESPONSIVO</p>
+                        <p className="descriptionTitle">Modelos Responsivo</p>
                         <p>
                             Páginas perfeitamente preparadas para se adaptar a diferentes dispositivos e telas, como computadores,
                             celulares e tablets.
@@ -87,7 +87,7 @@ const WebsitesBlogs = () => {
                     </Col>
 
                     <Col md={3} className="shadowContainer">
-                        <p className="descriptionTitle">PRESENÇA ONLINE</p>
+                        <p className="descriptionTitle">Presença online</p>
                         <p>
                             Tudo que você precisa no mesmo lugar: criação e otimização de sites, contas de e-mail profissional,
                             infraestrutura robusta e

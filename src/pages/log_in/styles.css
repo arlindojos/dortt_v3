@@ -1,0 +1,115 @@
+.main-Logs {
+    margin-bottom: 10rem;
+}
+
+#logs-content {
+    margin-top: 5rem;
+}
+
+#logs-content .logs-content01 {
+    height: 75vh;
+    background-color: var(--color-primary);
+    border-bottom-left-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+}
+
+.logs-content01 #Row {
+    height: 24%;
+}
+
+.logs-content01 #Row .logo-container {
+    float: right;
+}
+
+.logs-content01 .stay-connected-container {
+    display: flex;
+    justify-content: center;
+
+    font: 700 2.4rem Archivo;
+    color: var(--color-line-in-white);
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.8rem;
+    margin-top: 9rem;
+}
+
+#log-icons {
+    max-width: 1.4rem;
+}
+
+#logs-content .logs-content02 {
+    height: 75vh;
+    padding: 2rem;
+    background-color: var(--color-background);
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+#logs-content .logs-content02 legend {
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.8rem;
+}
+
+#logs-content .logs-content02 #input_form label {
+    display: none;
+}
+
+#logs-content .logs-content02 #checkbox_form {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+#logs-content .logs-content02 #checkbox_form a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+
+#logs-content .logs-content02 #buttonID {
+    text-align: center;
+    margin: 5.4rem auto;
+}
+
+#logs-content .logs-content02 form #buttonID  button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 200px;
+    height: 36px;
+    background-color: var(--color-primary-dark) !important;
+    color: var(--color-text-in-primary) !important;
+    font-size: 1.6rem;
+}
+
+#logs-content .logs-content02 form #buttonID button:hover {
+    background-color: var(--color-primary-lighter) !important;
+}
+
+#logs-content .logs-content02 form p {
+    margin-top: 25%;
+}
+
+#logs-content .logs-content02 form p a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+
+@media only screen and (max-width: 768px) {
+    #logs-content {
+        margin-top: 0;
+    }
+
+    #logs-content .logs-content01 {
+        height: 57vh;
+        border-top-right-radius: 0.3rem;
+        border-top-left-radius: 0.3rem;
+    }
+
+    .logo-container img {
+        max-width: 17rem;
+    }
+}

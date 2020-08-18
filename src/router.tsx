@@ -6,17 +6,21 @@ import Logos from './pages/Logos';
 import SignUp from './pages/Sign_up';
 import AboutUs from './pages/About_us';
 import ContactUs from './pages/contact';
+import LogIn from './pages/log_in';
+import WebOptimize from './pages/web_optimization';
 
 
 const Routes = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Dortt} />
-            <Route path="/services/websites_blogs" component={WebsitesBlogs} />
+            <Route path="/services/Websites-and-Blogs" component={WebsitesBlogs} />
             <Route path="/services/logos" component={Logos} />
             <Route path="/sign_up" component={SignUp} />
             <Route path="/about_us" component={AboutUs} />
             <Route path="/contact" component={ContactUs} />
+            <Route path="/log_in" component={LogIn} />
+            <Route path="/Optimize-Your-Website" component={WebOptimize} />
         </Switch>
     </BrowserRouter>
 )

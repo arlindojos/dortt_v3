@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import logop from '../../assets/images/logop.svg';
+import logop from '../../assets/images/logo_v3.svg';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import './styles.css'
@@ -42,13 +42,13 @@ export default class Header extends Component {
                         <li id="Dropdown_Services">
                             <a className="Dropdown-button" href="#">Serviços <i className="fas fa-caret-down"></i></a>
                             <div className="DropdownContent">
-                                <a href="/services/websites_blogs">Websites e Blogs</a>
+                                <a href="/services/Websites-and-Blogs">Websites e Blogs</a>
                                 <a href="#Email profissional">Email profissional</a>
                                 <a href="/services/logos">logótipos</a>
-                                <a href="#Otimização de sites">Otimização de sites</a>
+                                <a href="/Optimize-Your-Website">Otimização de sites</a>
                             </div>
                         </li>
-                        <li><a href="/sign_up">Inscreva-se</a></li>
+                        <li><a href="/log_in">Log-In</a></li>
                         <li><a href="/about_us">Sobre-nós</a></li>
                         <li><Button><a href="/contact">Contactos</a></Button></li>
                     </ul>
