@@ -20,8 +20,18 @@ const Footer = () => {
                 <Row>
                     <Col md={3} className="footerColon01">
                         <div>
-                            <a href="/about_us"><strong>Porquê a Dortt?</strong></a>
-                            <a href="/services/Websites-and-Blogs">O que é Web Design?</a>
+                            <a href="/about_us">
+                                <strong>Porquê a Dortt?</strong>
+                            </a>
+
+                            <a href="/services/Websites-and-Blogs">
+                                O que é Web Design?
+                            </a>
+
+                            <a href="/services/Optimize-Your-Website">
+                                O que é Optimização de Website?
+                            </a>
+                            
                             <Image src={LogoImg} alt="Dortt" fluid />
                         </div>
                     </Col>
@@ -31,7 +41,7 @@ const Footer = () => {
                         <a href="/services/Websites-and-Blogs">Website</a>
                         <a href="/services/Websites-and-Blogs">Blog</a>
                         <a href="/services/logos">Logo</a>
-                        <a href="/services/websites_blogs">Email Profissional</a>
+                        <a href="/services/logos">Email Profissional</a>
                         <a href="/Optimize-Your-Website">Otimização de Website</a>
                     </Col>
 

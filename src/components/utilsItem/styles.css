@@ -18,7 +18,65 @@
     font-size: 30px;
 }
 
-.AlertMail a {
-    text-decoration: none;
+.robot-notify {
+    max-width: 26rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    animation-name: robotMessage;
+    animation-fill-mode: backwards;
+    animation-duration: 2s;
+    animation-delay: 6s;
+    animation-timing-function: ease-out;
+    top: 1.2rem;
+}
+
+@keyframes robotMessage {
+    0% {
+        left: -40rem;
+    }
+
+    100% {
+        left: 0rem;
+    }
+}
+
+.robot-notify #robot i {
+    font-size: 4rem;
+    color: var(--color-primary);
+    margin-top: 0.8rem;
+}
+
+#robot-dot {
+    position: relative;
+    top: 0.6rem;
+    left: 1.2rem;
+    width: 2.4rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background-color: #E6E6E6;
+}
+
+.robot-notify #robot-message {
+    background-color: #E6E6E6;
+    padding: 1rem;
+    max-width: 20rem;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 5px 1px var(--color-box-shadow);
+}
+
+.robot-notify #robot-message span {
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--color-footer-in-primary-light);
+}
+
+.robot-notify #robot-message span a {
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: var(--color-primary)
 }

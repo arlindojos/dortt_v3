@@ -1,11 +1,9 @@
 .LongText div {
     margin: 1% 0;
-    box-shadow: 2px 2px 2px 2px var(--color-box-shadow);
 }
 
 .LongText div p {
     margin: 30px 20px;
-    text-indent: 30px;
 }
 
 .LongText div h4 {

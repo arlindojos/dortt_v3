@@ -8,6 +8,7 @@ import AboutUs from './pages/About_us';
 import ContactUs from './pages/contact';
 import LogIn from './pages/log_in';
 import WebOptimize from './pages/web_optimization';
+import GotService from './pages/GotService';
 
 
 const Routes = () => (
@@ -20,7 +21,8 @@ const Routes = () => (
             <Route path="/about_us" component={AboutUs} />
             <Route path="/contact" component={ContactUs} />
             <Route path="/log_in" component={LogIn} />
-            <Route path="/Optimize-Your-Website" component={WebOptimize} />
+            <Route path="/services/Optimize-Your-Website" component={WebOptimize} />
+            <Route path="/services/contact" component={GotService} />
         </Switch>
     </BrowserRouter>
 )

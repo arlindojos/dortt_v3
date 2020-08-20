@@ -29,7 +29,7 @@ const Logos = () => {
                 <Row>
                     <Col md={7} className="LogoRow01Col01">
                         <Image src={DesignNow} alt="Design" fluid />
-                        <div>
+                        <div id="logos-Buttons">
                             <Button>
                                 <Link to="/services/contact" >Criar Website</Link>
                             </Button>
@@ -67,7 +67,7 @@ const Logos = () => {
                             </p>
                             <p>
                                 Tem um website, mas ele não transmite a mensagem que o seu negocio quer que chegue aos seus usuários ou não agrega os conceitos de usabilidade e experiência do usuário? Então esse é o momento de nos 
-                                <Link to="services/contact">
+                                <Link to="/services/contact">
                                     <span>
                                         <i className="fas fa-angle-double-right"></i>
                                     </span>
@@ -105,7 +105,8 @@ const Logos = () => {
                     </Col>
                 </Row>
             </Container>
-
+            
+            <div id="email-profissional"></div>
             <MailService />
 
             <WhatsappForm />

@@ -51,7 +51,7 @@ export default class Dortt extends Component {
                                     <p>Seu logótipo é a cara pública da sua marca. Com o objetivo de passar uma ótima impressão a ela criamos design limpo, simples e memorável que transmite a essência da sua marca.</p>
                                 <div className="text-center  mb-5">
                                     <Button className="Button" >
-                                        <Link to="/cotação">Solicitar Cotação</Link>
+                                        <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ export default class Dortt extends Component {
                                 <p>Criamos páginas perfeitamente preparadas para se adaptar a diferentes dispositivos e telas, como computadores, celulares e tablets e de uso fácil e intuitivo.</p>
                                 <div className="text-center  mb-5">
                                     <Button className="Button buttonWebsite" >
-                                        <Link to="/cotação">Solicitar Cotação</Link>
+                                        <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ export default class Dortt extends Component {
                                 <p>Tenha uma ajuda profissional para criar o email da sua empresa e, conquiste a confiança dos seus clientes com um endereço de e-mail profissional com o nome da sua empresa e segurança.</p>
                                 <div className="text-center  mb-5">
                                     <Button className="Button" >
-                                        <Link to="/cotação">Solicitar Cotação</Link>
+                                        <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@ export default class Dortt extends Component {
                                 <p>Aumente a sua visibilidade nos motores de pesquisa tipo Google, Sapo ou Bing e pare de perder clientes qualificados. Usamos técnicas assertivas</p>
                                 <div className="text-center mb-5">
                                     <Button className="Button button-optimize" >
-                                        <Link to="/cotação">Solicitar Cotação</Link>
+                                        <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
                                 </div>
 

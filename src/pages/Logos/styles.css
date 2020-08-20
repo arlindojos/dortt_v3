@@ -2,11 +2,11 @@
     margin-top: 50px;
 }
 
-.LogoRow01Col01 div {
+.LogoRow01Col01 #logos-Buttons {
     text-align: center;
 }
 
-.LogoRow01Col01 div button {
+.LogoRow01Col01 #logos-Buttons button {
     width: 300px;
     height: 36px;
     margin: 0.8rem;
@@ -14,7 +14,7 @@
 
 }
 
-.LogoRow01Col01 div button a {
+.LogoRow01Col01 #logos-Buttons button a {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: var(--color-text-in-primary) !important;

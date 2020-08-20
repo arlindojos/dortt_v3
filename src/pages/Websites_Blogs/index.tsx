@@ -9,7 +9,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 
 import LongText from '../../components/wesites_BlogsLongText';
-import { WhatsappForm } from '../../components/utilsItem';
+import { WhatsappForm, AlertMail  } from '../../components/utilsItem';
 import MailService from '../../components/MailItem';
 
 import macbookImg from '../../assets/images/apple-desk-laptop-macbook.png';
@@ -102,6 +102,8 @@ const WebsitesBlogs = () => {
                         <div>
                             <Image src={WebsiteOnManyDevices} alt="Websites que se adequa a qualquer dispositivo" fluid />
                         </div>
+
+                        <AlertMail />
                     </Col>
 
                     <Col md={5}>
@@ -140,6 +142,7 @@ const WebsitesBlogs = () => {
                     </Col>
                 </Row>
             </Container>
+            <div id="email-profissional"></div>
             <MailService />
             
             <WhatsappForm />

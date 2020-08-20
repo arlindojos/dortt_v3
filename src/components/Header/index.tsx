@@ -38,19 +38,32 @@ export default class Header extends Component {
                         <Image src={logop} fluid />
                     </div>
                     <ul className={Active} id="Nav_ulLists">
-                        <li><a href="/"><i className="fa fa-home" aria-hidden="true"></i> Pagina inicial</a></li>
+                        <li>
+                            <a href="/"><i className="fa fa-home" aria-hidden="true"></i> Pagina inicial</a>
+                        </li>
+                        
                         <li id="Dropdown_Services">
                             <a className="Dropdown-button" href="#">Serviços <i className="fas fa-caret-down"></i></a>
+                            
                             <div className="DropdownContent">
                                 <a href="/services/Websites-and-Blogs">Websites e Blogs</a>
-                                <a href="#Email profissional">Email profissional</a>
+                                <a href="/services/logos">Email profissional</a>
                                 <a href="/services/logos">logótipos</a>
-                                <a href="/Optimize-Your-Website">Otimização de sites</a>
+                                <a href="/services/Optimize-Your-Website">Otimização de sites</a>
                             </div>
                         </li>
-                        <li><a href="/log_in">Log-In</a></li>
-                        <li><a href="/about_us">Sobre-nós</a></li>
-                        <li><Button><a href="/contact">Contactos</a></Button></li>
+
+                        <li>
+                            <a href="/log_in"><i className="fas fa-user-alt"></i> Log-In</a>
+                        </li>
+
+                        <li>
+                            <a href="/about_us">Sobre-nós</a>
+                        </li>
+
+                        <li>
+                            <Button><a href="/contact"><i className="fab fa-teamspeak"></i> Contactos</a></Button>
+                        </li>
                     </ul>
                 </div>
             </header>

@@ -33,7 +33,7 @@ footer {
 .footerRow02 {
     padding-top: 30px;  
     line-height: 50px;
-    border-top: 1px solid #fff; 
+    border-top: 1px solid var(--color-line-in-white); 
 }
 
 .socialIcons a i {

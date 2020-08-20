@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
-import Alert from 'react-bootstrap/esm/Alert';
 import Button from 'react-bootstrap/esm/Button';
 
 import './styles.css';
@@ -25,18 +23,22 @@ export const AlertMail = () => {
 
     if (show) {
         return (
-       <Alert variant="primary" onClose={() => setShow(false)} dismissible>
-            <p className="AlertMail">
-                Precisa de um email Profissional? 
-                <Link to="/email-profissional">
+            <div className="robot-notify">
+                <div id="robot">
+                    <i className="fas fa-robot"></i>
+                </div>
 
+                <div id="robot-dot"></div>
+                <div id="robot-message">
                     <span>
-                        <i className="fas fa-angle-double-right"></i>
+                        Precisa de um 
+                        <a href="#email-profissional">
+                            <i className="fas fa-angle-double-right"></i>
+                            email Profissional?
+                        </a>
                     </span>
-                    Saber mais
-                </Link>
-            </p>
-        </Alert>
+                </div>
+            </div>
         );
     }
     return <Button onClick={() => setShow(true)}>Show Alert</Button>;
