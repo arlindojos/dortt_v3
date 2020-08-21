@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
@@ -9,6 +10,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import Input from '../../components/Input';
+import api from '../../services/api';
 
 import LogoV3 from '../../assets/images/logo_v3.svg';
 import Group1 from '../../assets/images/icons/Group-1.svg';
@@ -24,6 +26,27 @@ import './styles.css';
 
 
 const LogIn = () => {
+    const history = useHistory();
+
+    const [ email, setEmail ] = useState('');
+    const [ password, setpassword ] = useState('');
+
+    const HandleLogs = (e: FormEvent) => {
+        e.preventDefault();
+
+        api.post('/api/login', {
+            email,
+            password
+        }).then(() => {
+            alert('Você está logado agora');
+
+            history.push('/');
+        }).catch(() => {
+
+            alert('erro no login');
+        })
+    }
+    
     return (
         <div className="main-Logs">
             <Container>
@@ -83,7 +106,7 @@ const LogIn = () => {
                             </Col>
 
                             <Col md={6} className="logs-content02">
-                                <form>
+                                <form onSubmit={ HandleLogs }>
                                     <fieldset id="input_form">
                                         <legend>
                                             Fazer login
@@ -92,14 +115,16 @@ const LogIn = () => {
                                         <Input  name="email" 
                                             label="E-mail"
                                             placeholder="E-mail"
-                                            value=""
+                                            value={email}
+                                            onChange={(e) => { setEmail(e.target.value) }}
                                         />
 
                                         <Input  name="password" 
                                             label="Senha"
                                             placeholder="Senha"
                                             type="password"
-                                            value=""
+                                            value={password}
+                                            onChange={(e) => { setpassword(e.target.value) }}
                                         />
                                     </fieldset>
 

@@ -1,0 +1,52 @@
+#main-blockReset {
+    margin-top: 5rem;
+    margin-bottom: 40vh;
+}
+
+#main-blockReset form {
+    padding: 2rem;
+    background-color: var(--color-background);
+    border-radius: 0.3rem;
+}
+
+#main-blockReset form  fieldset legend {
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.8rem
+}
+
+#main-blockReset form  fieldset label {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--color-title-in-primary);
+}
+
+#main-blockReset form #ButtonID {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#main-blockReset form #ButtonID button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    max-width: 250px;
+    height: 36px;
+    background-color: var(--color-primary-dark) !important;
+    color: var(--color-text-in-primary) !important;
+    font-size: 1.6rem;
+}
+
+#main-blockReset form #ButtonID button:hover {
+    background-color: var(--color-primary-lighter) !important;
+}
+
+.Link-Container {
+    text-align: end;
+    margin-top: 2rem;
+}
+
+.Link-Container a {
+    text-decoration: none;
+    color: var(--color-primary);
+}

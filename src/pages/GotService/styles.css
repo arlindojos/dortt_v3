@@ -1,0 +1,75 @@
+#main-header-GotService {
+    background-color: var(--color-primary);
+}
+
+#main-header-GotService #header-content {
+    padding: 5rem;
+    margin-left: 10rem;
+}
+
+#main-header-GotService #header-content img {
+    max-width: 28rem;
+}
+
+#main-header-GotService #header-content .text {
+    color: var(--color-text-in-primary);
+}
+
+#main-header-GotService #header-content .text h3 {
+    font: 700 2.4rem Archivo;
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.8rem;
+}
+
+#main-header-GotService #header-content .text p i {
+    font-size: 1.3rem;
+}
+
+#main-block-GotService {
+    margin-bottom: 5rem;
+}
+
+#main-block-GotService form {
+    padding: 2rem;
+    background-color: var(--color-background);
+    border-bottom-right-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+
+#main-block-GotService form fieldset + fieldset {
+    margin-top: 6.4rem;
+}
+
+#main-block-GotService form fieldset legend {
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.8rem;
+}
+
+#main-block-GotService form #fieldset-01 label {
+    display: none;
+}
+
+#main-block-GotService form fieldset label {
+    font-size: 1.6rem;
+}
+
+#main-block-GotService form #ButtonID {
+    text-align: center;
+}
+
+#main-block-GotService form button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 200px;
+    height: 3.6rem;
+    background-color: var(--color-primary-dark) !important;
+    color: var(--color-text-in-primary) !important;
+    font-size: 1.6rem;
+    margin-top: 3.4rem;
+}
+
+#main-block-GotService form button:hover {
+    background-color: var(--color-primary-lighter) !important;
+}

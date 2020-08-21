@@ -9,6 +9,7 @@ import ContactUs from './pages/contact';
 import LogIn from './pages/log_in';
 import WebOptimize from './pages/web_optimization';
 import GotService from './pages/GotService';
+import ResetPassoword from './pages/reset_password';
 
 
 const Routes = () => (
@@ -23,6 +24,7 @@ const Routes = () => (
             <Route path="/log_in" component={LogIn} />
             <Route path="/services/Optimize-Your-Website" component={WebOptimize} />
             <Route path="/services/contact" component={GotService} />
+            <Route path="/reset_password" component={ResetPassoword} />       
         </Switch>
     </BrowserRouter>
 )
