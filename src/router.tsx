@@ -10,6 +10,7 @@ import LogIn from './pages/log_in';
 import WebOptimize from './pages/web_optimization';
 import GotService from './pages/GotService';
 import ResetPassoword from './pages/reset_password';
+import UserDada from './pages/user_data';
 
 
 const Routes = () => (
@@ -25,6 +26,7 @@ const Routes = () => (
             <Route path="/services/Optimize-Your-Website" component={WebOptimize} />
             <Route path="/services/contact" component={GotService} />
             <Route path="/reset_password" component={ResetPassoword} />       
+            <Route path="/dortt/user_data" component={UserDada} />
         </Switch>
     </BrowserRouter>
 )

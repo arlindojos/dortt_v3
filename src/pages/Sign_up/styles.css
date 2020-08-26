@@ -73,3 +73,8 @@
         padding: 0.2rem;
     }
 }
+
+#ShowErrors {
+    font-size: 1.4rem;
+    color:#dc3545;
+}

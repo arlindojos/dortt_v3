@@ -28,22 +28,39 @@ import './styles.css';
 const LogIn = () => {
     const history = useHistory();
 
-    const [ email, setEmail ] = useState('');
-    const [ password, setpassword ] = useState('');
+    const [ emailUsr, setEmail ] = useState('');
+    const [ passwordUsr, setPassword ] = useState('');
+    const [ name, setName ] = useState('');
+    const [ surname, setSurname ] = useState('');
+    const [ development, setDevelopment ] = useState(false);
+    const [ websites, setWebsites ] = useState(false);
+    const [ createdAt, setCreatedAt ] = useState('');
+
+
+    // Show Error
+    const [ errorToLogin, seterrorToLogin ] = useState('');
 
     const HandleLogs = (e: FormEvent) => {
         e.preventDefault();
 
         api.post('/api/login', {
-            email,
-            password
-        }).then(() => {
-            alert('Você está logado agora');
+            emailUsr,
+            passwordUsr
+        }).then((response) => {
+            const { name, surname, emailUsr, development, websites, createdAt } = response.data;
+            
+            setEmail(emailUsr)
+            setName(name)
+            setSurname(surname)
+            setDevelopment(development)
+            setWebsites(websites)
+            setCreatedAt(createdAt)
 
-            history.push('/');
+
+            history.push('/dortt/user_data')
         }).catch(() => {
-
-            alert('erro no login');
+            
+            seterrorToLogin('Credenciais inválidas. Por favor, tente novamente.')
         })
     }
     
@@ -98,7 +115,7 @@ const LogIn = () => {
                                 <Row id="Row">
                                     <Col>
                                         <div className="logo-container">
-                                            <Image src={LogoV3} fluid />
+                                            <Image src={ LogoV3 } fluid />
                                         </div>
                                     </Col>   
                                 </Row>
@@ -111,20 +128,23 @@ const LogIn = () => {
                                         <legend>
                                             Fazer login
                                         </legend>
+                                        <div id="ShowErrors">{ errorToLogin }</div>
 
                                         <Input  name="email" 
                                             label="E-mail"
                                             placeholder="E-mail"
-                                            value={email}
+                                            value={emailUsr}
                                             onChange={(e) => { setEmail(e.target.value) }}
+                                            required
                                         />
 
                                         <Input  name="password" 
                                             label="Senha"
                                             placeholder="Senha"
                                             type="password"
-                                            value={password}
-                                            onChange={(e) => { setpassword(e.target.value) }}
+                                            value={passwordUsr}
+                                            onChange={(e) => { setPassword(e.target.value) }}
+                                            required
                                         />
                                     </fieldset>
 
