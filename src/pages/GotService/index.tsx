@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Input from '../../components/Input';
 import Select from '../../components/select';
 import TextArea from '../../components/TextArea';
@@ -47,7 +49,8 @@ const GotService = () => {
     }
 
     return (
-        <div>
+        <>
+            <Header />
             <div id="main-header-GotService">
                 <Container  fluid>
                     <Row id="header-content">
@@ -126,7 +129,8 @@ const GotService = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
+            <Footer />
+        </>
     )
 }
 

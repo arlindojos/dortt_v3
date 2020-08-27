@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -20,17 +21,17 @@ const Footer = () => {
                 <Row>
                     <Col md={3} className="footerColon01">
                         <div>
-                            <a href="/about_us">
+                            <Link to="/about_us">
                                 <strong>Porquê a Dortt?</strong>
-                            </a>
+                            </Link>
 
-                            <a href="/services/Websites-and-Blogs">
+                            <Link to="/services/Websites-and-Blogs">
                                 O que é Web Design?
-                            </a>
+                            </Link>
 
-                            <a href="/services/Optimize-Your-Website">
+                            <Link to="/services/Optimize-Your-Website">
                                 O que é Optimização de Website?
-                            </a>
+                            </Link>
                             
                             <Image src={LogoImg} alt="Dortt" fluid />
                         </div>
@@ -38,61 +39,61 @@ const Footer = () => {
 
                     <Col md={3} className="footerColon01" >
                         <span><strong>Serviços</strong></span>
-                        <a href="/services/Websites-and-Blogs">Website</a>
-                        <a href="/services/Websites-and-Blogs">Blog</a>
-                        <a href="/services/logos">Logo</a>
-                        <a href="/services/logos">Email Profissional</a>
-                        <a href="/Optimize-Your-Website">Otimização de Website</a>
+                        <Link to="/services/Websites-and-Blogs">Website</Link>
+                        <Link to="/services/Websites-and-Blogs">Blog</Link>
+                        <Link to="/services/logos">Logo</Link>
+                        <Link to="/services/logos">Email Profissional</Link>
+                        <Link to="/Optimize-Your-Website">Otimização de Website</Link>
                     </Col>
 
                     <Col md={3} className="footerColon01">
                         <span><strong>Cliente</strong></span>
-                        <a href="/log_in">Sua conta</a>
-                        <a href="/sign_up">Inscreva-se</a>
-                        <a href="/contact">Ajuda</a>
+                        <Link to="/log_in">Sua conta</Link>
+                        <Link to="/sign_up">Inscreva-se</Link>
+                        <Link to="/contact">Ajuda</Link>
                     </Col>
 
                     <Col md={3} className="footerColon01">
                         <span><strong>Empresa</strong></span>
-                        <a href="/about_us">Sobre nós</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Parceiros</a>
-                        <a href="/contact">contáctenos</a>
+                        <Link to="/about_us">Sobre nós</Link>
+                        <Link to="#">Blog</Link>
+                        <Link to="#">Parceiros</Link>
+                        <Link to="/contact">contáctenos</Link>
                     </Col>
                 </Row>
 
                 <p className="text-right legalLink">
-                    <a href="#">
+                    <Link to="#">
                         Segurança
-                    </a>
+                    </Link>
                 </p>
 
                 <Row className="footerRow02">
                     <Col md={6}>
                         <div>
                             <p className="text-light">
-                                copyright: &copy <span>{thisYear}</span> dortt.net hrefdos os direihrefs reservados.
+                                copyright: &copy <span>{thisYear}</span> dortt.neLink todos os dirLinkitos reservados.
                             </p>
                         </div>
                     </Col>
 
                     <Col md={6} >
                         <div className="text-right socialIcons">
-                            <a href="#">
+                            <Link to="#">
                                 <i className="fa fa-facebook    "></i>
-                            </a>
+                            </Link>
 
-                            <a href="#">
+                            <Link to="#">
                                 <i className="fa fa-linkedin    "></i>
-                            </a>
+                            </Link>
 
-                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=258844444689">
+                            <Link to="https://api.whatsapp.com/send?1=pt_BR&phone=258844444689">
                                 <i className="fa fa-whatsapp    "></i>
-                            </a>
+                            </Link>
 
-                            <a href="https://www.instagram.com/dortt.net_oficial/">
+                            <Link to="https://www.instagram.com/dortt.net_oficial/">
                                 <i className="fa fa-instagram    "></i>
-                            </a>
+                            </Link>
                         </div>
                     </Col>
                 </Row>

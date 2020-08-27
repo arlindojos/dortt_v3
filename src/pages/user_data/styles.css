@@ -1,0 +1,69 @@
+#main-blockData {
+    background-color: var(--color-background);
+    margin-bottom: 6rem;
+    padding: 3rem 1.4rem;
+}
+
+#legendData {
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    margin-top: 6rem;
+}
+
+#main-blockData img {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+#main-blockData #userName {
+    display: flex;
+    align-items: center;
+}
+
+#main-blockData #userName div {
+    font: 700 2.2rem Archivo;
+    color: var(--color-title-in-primary);
+    border-bottom: 1px solid var(--color-background-light);
+}
+
+#main-blockData #Lists {
+    margin-top: 3rem;
+}
+
+#main-blockData #Lists div {
+    background-color: var(--color-background);
+    color: var(--color-title-in-primary);
+    font-weight: bold;
+}
+
+#main-blockData #Lists div #a {
+    margin-left: 12rem;
+    font-weight: 400;
+}
+
+#main-blockData #Lists div #b {
+    margin-left: 9.2rem;
+    font-weight: 400;
+}
+
+#main-blockData #Lists div #c {
+    margin-left: 3rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 462px) {
+    #main-blockData #Lists div #a {
+        display: contents;
+        font-weight: 400;
+    }
+
+    #main-blockData #Lists div #b {
+        display: contents;
+        font-weight: 400;
+    }
+
+    #main-blockData #Lists div #c {
+        display: contents;
+        font-weight: 400;
+    }
+}

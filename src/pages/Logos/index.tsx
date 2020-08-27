@@ -8,6 +8,8 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { WhatsappForm, AlertMail } from '../../components/utilsItem';
 import MailService from '../../components/MailItem';
 
@@ -21,7 +23,8 @@ import './styles.css';
 
 const Logos = () => {
     return (
-        <div>
+        <>
+            <Header />
             <Container>
                 <Row>
                     <Col md={7} className="LogoRow01Col01">
@@ -107,7 +110,8 @@ const Logos = () => {
             <MailService />
 
             <WhatsappForm />
-        </div>
+            <Footer />
+        </>
     )
 }
 

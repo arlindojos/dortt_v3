@@ -6,6 +6,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Input from '../../components/Input';
 import api from '../../services/api';
 
@@ -33,7 +35,8 @@ const ResetPassoword = () => {
     }
 
     return (
-        <div>
+        <>
+            <Header /> 
             <Container>
                 <Row>
                     <Col id="main-blockReset" md={{span: 8, offset: 2}}>
@@ -64,12 +67,12 @@ const ResetPassoword = () => {
                                 </Button>
                             </div>
 
-                            
                         </form>
                     </Col>
                 </Row>
             </Container>
-        </div>
+            <Footer />
+        </>
     )
 }
 

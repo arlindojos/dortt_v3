@@ -8,6 +8,8 @@ import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import LongText from '../../components/wesites_BlogsLongText';
 import { WhatsappForm, AlertMail  } from '../../components/utilsItem';
 import MailService from '../../components/MailItem';
@@ -23,7 +25,8 @@ import './styles.css';
 
 const WebsitesBlogs = () => {
     return (
-        <div>
+        <>
+            <Header />
             <Container>
                 <Row>
                     <Col md={7} className="WebsitesBlogs_Row01_Col01">
@@ -146,7 +149,8 @@ const WebsitesBlogs = () => {
             <MailService />
             
             <WhatsappForm />
-        </div>
+            <Footer />
+        </>
     )
 }
 

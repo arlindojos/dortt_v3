@@ -9,6 +9,8 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 
 import { WhatsappForm } from '../../components/utilsItem';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import CTO_Img from '../../assets/images/DSC_5457.jpg';
 import BrandStrategist_Img from '../../assets/images/foto.png';
@@ -20,7 +22,8 @@ import './styles.css';
 
 const AboutUs = () => {
     return (
-        <div>
+        <>
+            <Header />
             <Container className="container-block01" fluid="xl">
                 <Jumbotron className="main-headerAbout" fluid>
                     <div>
@@ -179,7 +182,8 @@ const AboutUs = () => {
             </Container>
 
             <WhatsappForm />
-        </div>
+            <Footer />
+        </>
     )
 }
 

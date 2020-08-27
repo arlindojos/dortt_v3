@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { WhatsappForm } from '../../components/utilsItem';
 import Input from '../../components/Input';
 import TextArea from '../../components/TextArea';
@@ -47,6 +49,7 @@ const ContactUs = () => {
 
     return (
         <div>
+            <Header />
             <Container fluid>
                 <Row id="container-blockContact">
                     <Col md={4}>
@@ -94,6 +97,7 @@ const ContactUs = () => {
             </Container>
 
             <WhatsappForm />
+            <Footer />
         </div>
     )
 }

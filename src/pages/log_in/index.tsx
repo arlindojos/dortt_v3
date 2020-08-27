@@ -1,6 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +10,8 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Input from '../../components/Input';
 import api from '../../services/api';
 
@@ -27,14 +30,11 @@ import './styles.css';
 
 const LogIn = () => {
     const history = useHistory();
+    const dispatch = useDispatch();
 
-    const [ emailUsr, setEmail ] = useState('');
+    const [ email, setEmail ] = useState('');
     const [ passwordUsr, setPassword ] = useState('');
-    const [ name, setName ] = useState('');
-    const [ surname, setSurname ] = useState('');
-    const [ development, setDevelopment ] = useState(false);
-    const [ websites, setWebsites ] = useState(false);
-    const [ createdAt, setCreatedAt ] = useState('');
+    const [ rememberUsr, setRememberUsr] = useState(false);
 
 
     // Show Error
@@ -44,27 +44,23 @@ const LogIn = () => {
         e.preventDefault();
 
         api.post('/api/login', {
-            emailUsr,
-            passwordUsr
+            emailUsr: email,
+            passwordUsr: passwordUsr
+
         }).then((response) => {
             const { name, surname, emailUsr, development, websites, createdAt } = response.data;
-            
-            setEmail(emailUsr)
-            setName(name)
-            setSurname(surname)
-            setDevelopment(development)
-            setWebsites(websites)
-            setCreatedAt(createdAt)
-
+            dispatch({ type: 'REDIRECT_USER', name, surname, emailUsr, development, websites, createdAt, rememberUsr })
 
             history.push('/dortt/user_data')
-        }).catch(() => {
-            
+        }).catch((err) => {
+            console.log(err)
             seterrorToLogin('Credenciais inválidas. Por favor, tente novamente.')
         })
     }
     
     return (
+        <>
+        <Header />
         <div className="main-Logs">
             <Container>
                 <Row>
@@ -133,7 +129,7 @@ const LogIn = () => {
                                         <Input  name="email" 
                                             label="E-mail"
                                             placeholder="E-mail"
-                                            value={emailUsr}
+                                            value={email}
                                             onChange={(e) => { setEmail(e.target.value) }}
                                             required
                                         />
@@ -150,7 +146,13 @@ const LogIn = () => {
 
                                     <div id="checkbox_form">
                                         <Form.Group controlId="formBasicCheckbox">
-                                            <Form.Check type="checkbox" label="Lembrar-me" />
+                                            <Form.Check 
+                                                type="checkbox" 
+                                                label="Lembrar-me" 
+                                                key="rememberUsr"
+                                                checked={rememberUsr}
+                                                onChange={(e: any) => { setRememberUsr(e.target.checked) }}
+                                            />
                                         </Form.Group>
 
                                         <Link to="/reset_password">Esqueci minha senha</Link>
@@ -168,6 +170,8 @@ const LogIn = () => {
                 </Row>
             </Container>
         </div>
+        <Footer />
+        </>
     )
 }
 

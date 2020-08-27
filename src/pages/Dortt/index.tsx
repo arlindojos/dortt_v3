@@ -8,6 +8,8 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { WhatsappForm } from '../../components/utilsItem';
 
 import webService from '../../assets/images/web-services.png';
@@ -23,7 +25,8 @@ import './styles.css';
 export default class Dortt extends Component {
     render () {
         return (
-            <div>
+            <>
+                <Header /> 
                 <Container className="mt-5">
                     <Row>
                         <Col md={8}>
@@ -127,10 +130,11 @@ export default class Dortt extends Component {
                             </Col>
                         </Row>
                     </Container>
-                    </Jumbotron>
+                </Jumbotron>
 
-                    <WhatsappForm />
-            </div>
+                <WhatsappForm />
+                <Footer />
+            </>
         )
     }
 }

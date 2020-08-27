@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 import logop from '../../assets/images/logo_v3.svg';
 import Button from 'react-bootstrap/Button';
@@ -39,30 +40,30 @@ export default class Header extends Component {
                     </div>
                     <ul className={Active} id="Nav_ulLists">
                         <li>
-                            <a href="/"><i className="fa fa-home" aria-hidden="true"></i> Pagina inicial</a>
+                            <Link to="/"><i className="fa fa-home" aria-hidden="true"></i> Pagina inicial</Link>
                         </li>
                         
                         <li id="Dropdown_Services">
-                            <a className="Dropdown-button" href="/services">Serviços <i className="fas fa-caret-down"></i></a>
+                            <Link className="Dropdown-button" to="#">Serviços <i className="fas fa-caret-down"></i></Link>
                             
                             <div className="DropdownContent">
-                                <a href="/services/Websites-and-Blogs">Websites e Blogs</a>
-                                <a href="/services/logos">Email profissional</a>
-                                <a href="/services/logos">logótipos</a>
-                                <a href="/services/Optimize-Your-Website">Otimização de sites</a>
+                                <Link to="/services/Websites-and-Blogs">Websites e Blogs</Link>
+                                <Link to="/services/logos">Email profissional</Link>
+                                <Link to="/services/logos">logótipos</Link>
+                                <Link to="/services/Optimize-Your-Website">Otimização de sites</Link>
                             </div>
                         </li>
 
                         <li>
-                            <a href="/log_in"><i className="fas fa-user-alt"></i> Log-In</a>
+                            <Link to="/log_in"><i className="fas fa-user-alt"></i> Log-In</Link>
                         </li>
 
                         <li>
-                            <a href="/about_us">Sobre-nós</a>
+                            <Link to="/about_us">Sobre-nós</Link>
                         </li>
 
                         <li>
-                            <Button><a href="/contact"><i className="fab fa-teamspeak"></i> Contactos</a></Button>
+                            <Button><Link to="/contact"><i className="fab fa-teamspeak"></i> Contactos</Link></Button>
                         </li>
                     </ul>
                 </div>

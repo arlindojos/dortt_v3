@@ -9,6 +9,8 @@ import Image from 'react-bootstrap/Image';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { WhatsappForm } from '../../components/utilsItem';
 import Input from '../../components/Input';
 import api from '../../services/api';
@@ -102,7 +104,8 @@ const SignUp = () => {
     }
 
     return (
-        <div>
+        <>
+            <Header /> 
             <Container>
                 <Row>
                     <Col md={{span: 8, offset: 2}}>
@@ -208,7 +211,8 @@ const SignUp = () => {
             </Container>
 
             <WhatsappForm />
-        </div>
+            <Footer />
+        </>
     )
 }
 
