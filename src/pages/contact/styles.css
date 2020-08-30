@@ -28,6 +28,40 @@
     margin-top: 3rem;
 }
 
+#CloseUserError-Mail {
+    display: none;
+}
+
+.showUserError-Mail {
+    display: flex;
+    justify-content: center;
+}
+
+.showUserError-Mail div {
+    max-width: 46rem;
+    padding: 1rem;
+    background-color: var(--color-box-base);
+    border-radius: 0.2rem;
+    box-shadow: 1px 4px 4px 1px var(--color-box-shadow);
+
+    position: absolute;
+    animation-name: showUserMessage;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    top: -3rem;
+}
+
+@keyframes showUserMessage {
+    0% {
+        top: -3rem;
+    }
+
+    100% {
+        top: 8rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     #HaveEmailSent {
         padding: 0 2rem;

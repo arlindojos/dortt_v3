@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -22,8 +23,14 @@ import digitalMarket from '../../assets/images/digital-market.jpg'
 import './styles.css';
 
 
-export default class Dortt extends Component {
-    render () {
+const Dortt = () => {
+        const dispatch = useDispatch();
+        let requestedService = '';
+
+        const HandleStates = () => {
+            dispatch({ type: 'USER_ACTIONS', requestedService })
+        }
+
         return (
             <>
                 <Header /> 
@@ -53,9 +60,18 @@ export default class Dortt extends Component {
                                     <p><strong>Criação de logótipos</strong></p>
                                     <p>Seu logótipo é a cara pública da sua marca. Com o objetivo de passar uma ótima impressão a ela criamos design limpo, simples e memorável que transmite a essência da sua marca.</p>
                                 <div className="text-center  mb-5">
-                                    <Button className="Button" >
+
+                                    <Button 
+                                        className="Button"
+                                        onClick={
+                                            () => {
+                                                requestedService = 'Criação de logótipos';
+                                                HandleStates()
+                                            }
+                                        }>
                                         <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
+
                                 </div>
                             </div>
                         </Col>
@@ -67,9 +83,18 @@ export default class Dortt extends Component {
                                 <p><strong>Websites e Blogs</strong></p>
                                 <p>Criamos páginas perfeitamente preparadas para se adaptar a diferentes dispositivos e telas, como computadores, celulares e tablets e de uso fácil e intuitivo.</p>
                                 <div className="text-center  mb-5">
-                                    <Button className="Button buttonWebsite" >
+
+                                    <Button 
+                                        className="Button buttonWebsite" 
+                                        onClick={
+                                            () => {
+                                                requestedService = 'Websites e Blogs';
+                                                HandleStates()
+                                            }
+                                        }>
                                         <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
+
                                 </div>
                             </div>
                         </Col>
@@ -81,9 +106,18 @@ export default class Dortt extends Component {
                                 <p><strong>Email profissional</strong></p>
                                 <p>Tenha uma ajuda profissional para criar o email da sua empresa e, conquiste a confiança dos seus clientes com um endereço de e-mail profissional com o nome da sua empresa e segurança.</p>
                                 <div className="text-center  mb-5">
-                                    <Button className="Button" >
+
+                                    <Button 
+                                        className="Button" 
+                                        onClick={
+                                            () => {
+                                                requestedService = 'Email profissional';
+                                                HandleStates()
+                                            }
+                                        }>
                                         <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
+
                                 </div>
                             </div>
                         </Col>
@@ -95,7 +129,14 @@ export default class Dortt extends Component {
                                 <p><strong>Otimização de sites</strong></p>
                                 <p>Aumente a sua visibilidade nos motores de pesquisa tipo Google, Sapo ou Bing e pare de perder clientes qualificados. Usamos técnicas assertivas</p>
                                 <div className="text-center mb-5">
-                                    <Button className="Button button-optimize" >
+                                    <Button 
+                                        className="Button button-optimize" 
+                                        onClick={
+                                            () => {
+                                                requestedService = 'Otimização de sites';
+                                                HandleStates()
+                                            }
+                                        }>
                                         <Link to="/services/contact">Solicitar Cotação</Link>
                                     </Button>
                                 </div>
@@ -136,5 +177,7 @@ export default class Dortt extends Component {
                 <Footer />
             </>
         )
-    }
 }
+
+
+export default Dortt;

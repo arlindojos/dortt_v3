@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
 
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
@@ -12,8 +14,14 @@ import opened_gi4n from '../../assets/images/undraw_opened_gi4n.svg';
 import './styles.css';
 
 
-
 const MailService = () => {
+    const dispatch = useDispatch();
+    let requestedService = '';
+
+    const HandleStates = () => {
+        dispatch({ type: 'USER_ACTIONS', requestedService })
+    }
+
     return (
         <div className="main-Mail">
                 <Container>
@@ -26,7 +34,15 @@ const MailService = () => {
                                 segurança.
                             </p>
                             <div>
-                                <Button className="mailButton">
+                                <Button 
+                                    className="mailButton" 
+                                    onClick={
+                                        () => {
+                                            requestedService = 'E-mail profissional';
+                                            HandleStates()
+                                        }
+                                    }
+                                >
                                     <Link  to="/services/contact">
                                         E-mail profissional
                                     </Link>

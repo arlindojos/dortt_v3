@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -24,6 +25,13 @@ import './styles.css';
 
 
 const WebsitesBlogs = () => {
+    const dispatch = useDispatch();
+    let requestedService = '';
+
+    const HandleStates = () => {
+        dispatch({ type: 'USER_ACTIONS', requestedService })
+    }
+
     return (
         <>
             <Header />
@@ -37,8 +45,15 @@ const WebsitesBlogs = () => {
                         </p>
 
                         <div className="button-website">
-                            <Button id="Button">
-                                <a href="/services/contact">Criar site</a>
+                            <Button 
+                            id="Button"
+                            onClick={
+                                () => {
+                                    requestedService = 'Criação de website';
+                                    HandleStates()
+                                }
+                            }>
+                                <Link to="/services/contact">Criar website</Link>
                             </Button>
                         </div>
                     </Col>
@@ -117,25 +132,53 @@ const WebsitesBlogs = () => {
                             fluid 
                         />
                         <div className="servicesButtons mt-5">
-                            <Button>
+                            <Button
+                                onClick={
+                                    () => {
+                                        requestedService = 'Criação de Website';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                 <Link  to="/services/contact">
                                     Criar Website
                                 </Link>
                             </Button>
 
-                            <Button>
+                            <Button
+                                onClick={
+                                    () => {
+                                        requestedService = 'E-mail profissional';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                 <Link  to="/services/contact">
                                     E-mail profissional
                                 </Link>
                             </Button>
 
-                            <Button>
+                            <Button 
+                                onClick={
+                                    () => {
+                                        requestedService = 'Otimização de sites';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                 <Link  to="/services/contact">
                                     Otimização de sites
                                 </Link>
                             </Button>
 
-                            <Button>
+                            <Button
+                                onClick={
+                                    () => {
+                                        requestedService = 'Logos';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                 <Link  to="/services/contact">
                                     Serviço de Logos
                                 </Link>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -22,6 +23,13 @@ import './styles.css';
 
 
 const Logos = () => {
+    const dispatch = useDispatch();
+    let requestedService = '';
+
+    const HandleStates = () => {
+        dispatch({ type: 'USER_ACTIONS', requestedService })
+    }
+
     return (
         <>
             <Header />
@@ -30,18 +38,46 @@ const Logos = () => {
                     <Col md={7} className="LogoRow01Col01">
                         <Image src={DesignNow} alt="Design" fluid />
                         <div id="logos-Buttons">
-                            <Button>
+                            <Button 
+                                onClick={
+                                    () => {
+                                        requestedService = 'Criação de website';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                 <Link to="/services/contact" >Criar Website</Link>
                             </Button>
-                            <Button>
+                            <Button 
+                                onClick={
+                                    () => {
+                                        requestedService = 'E-mail profissional';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                  <Link to="/services/contact" >E-mail profissional</Link>
                             </Button>
 
-                            <Button>
+                            <Button 
+                                onClick={
+                                    () => {
+                                        requestedService = 'Otimização de sites';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                 <Link to="/services/contact" >Otimização de sites</Link>
                             </Button>
 
-                            <Button>
+                            <Button 
+                                onClick={
+                                    () => {
+                                        requestedService = 'Logos';
+                                        HandleStates()
+                                    }
+                                }
+                            >
                                 <Link to="/services/contact" >Fazer um Logo</Link>
                             </Button>
                         </div>
@@ -67,7 +103,15 @@ const Logos = () => {
                             </p>
                             <p>
                                 Tem um website, mas ele não transmite a mensagem que o seu negocio quer que chegue aos seus usuários ou não agrega os conceitos de usabilidade e experiência do usuário? Então esse é o momento de nos 
-                                <Link to="/services/contact">
+                                <Link 
+                                    to="/services/contact"
+                                    onClick={
+                                        () => {
+                                            requestedService = 'Otimização de websites';
+                                            HandleStates()
+                                        }
+                                    }
+                                >
                                     <span>
                                         <i className="fas fa-angle-double-right"></i>
                                     </span>

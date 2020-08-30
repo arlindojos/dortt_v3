@@ -29,7 +29,7 @@
     animation-name: robotMessage;
     animation-fill-mode: backwards;
     animation-duration: 2s;
-    animation-delay: 6s;
+    animation-delay: 3s;
     animation-timing-function: ease-out;
     top: 1.2rem;
 }

@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/row';
@@ -21,30 +21,45 @@ import './styles.css';
 
 
 const GotService = () => {
-    const history = useHistory();
+    const userData: any = useSelector(state => state);
+    
+    const { requestedService } = userData.userActions;
     
     const [ name, setName ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ telefone, setTelefone ] = useState('');
+    const [ emailUsr, setEmailUsr ] = useState('');
+    const [ phone, setPhone ] = useState('');
     const [ userService, setUserService ] = useState('');
     const [ message, setMessage ] = useState('');
+
+    //Alert User
+    const [ alertMessage, setAlertMessage ] = useState('');
+    const [ showUserID, setShowUserID ] = useState('CloseUserError-Mail');
+    const [ alertColor, setAlertColor ] = useState({});
 
     const HandleServices = (e: FormEvent) => {
         e.preventDefault();
 
-        api.post('/send', {
+        const subject = `Nova Solicitação do serviço ${requestedService}`
+        api.post('/api/send', {
+            subject,
             name,
-            email,
-            telefone,
-            userService,
+            phone,
+            emailUsr,
             message
         }).then(() => {
-            alert('Entraremos em contacto em breve. Obrigado!');
-
-            history.push('/');
+            setName('')
+            setPhone('')
+            setEmailUsr('')
+            setMessage('')
+            
+            setAlertMessage('Recebemos o seu email, entraremos em contacto.')
+            setShowUserID('')
+            setAlertColor({color: '#0088a9'})
         }).catch(() => {
 
-            alert('erro no envio dos dados');
+            setAlertMessage('Não foi possível enviar o email. Por favor, tente novamente.')
+            setShowUserID('')
+            setAlertColor({color: '#dc3545'})
         })
     }
 
@@ -84,39 +99,25 @@ const GotService = () => {
                                     type="email"
                                     label="Endereço de email"
                                     placeholder="E-mail"
-                                    value={email}
-                                    onChange={(e) => { setEmail(e.target.value) }}
+                                    value={emailUsr}
+                                    onChange={(e) => { setEmailUsr(e.target.value) }}
                                 />
                                 
                                 <Input  name="telefone" 
                                     label="Telefone"
                                     placeholder="Telefone"
-                                    value={telefone}
-                                    onChange={(e) => { setTelefone(e.target.value) }}
+                                    value={phone}
+                                    onChange={(e) => { setPhone(e.target.value) }}
                                 />
                             </fieldset>
 
-                            <fieldset>
-                                <legend>Selecione o serviço</legend>
-
-                                <Select
-                                    name="userService"
-                                    label=""
-                                    value={userService}
-                                    onChange={(e) => setUserService(e.target.value) }
-                                    options={[
-                                        { value: 'Website', label: 'Website' },
-                                        { value: 'Blog', label: 'Blog' },
-                                        { value: 'Logo', label: 'Logo' },
-                                        { value: 'E-mail profissional', label: 'E-mail profissional' },
-                                        { value: 'Otimização de website', label: 'Otimização de website' }
-                                    ]}
-                                />
+                            <fieldset id="fieldset-02">
+                                <legend>Opcional. Descreva o serviço que deseja</legend>
 
                                 <TextArea
                                     name="message" 
-                                    label="Opcional" 
-                                    placeholder="Mensagem adicional"
+                                    label="" 
+                                    placeholder="Pode deixar em branco"
                                     value={message}
                                     onChange={(e) => { setMessage(e.target.value) }}
                                 />

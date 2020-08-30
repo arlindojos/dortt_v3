@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -19,6 +20,12 @@ import './styles.css';
 
 
 const WebOptimize = () => {
+    const dispatch = useDispatch();
+    let requestedService = '';
+
+    const HandleStates = () => {
+        dispatch({ type: 'USER_ACTIONS', requestedService })
+    }
 
     return (
         <> <Header />
@@ -37,7 +44,18 @@ const WebOptimize = () => {
                                 aumente a experiência do usuário e melhorar as hipóteses globais que o website será indexado pelos motores de busca.
                             </p>
 
-                            <Button><Link to="/services/contact">Solicitar cotação</Link></Button>
+                            <Button 
+                                onClick={
+                                    () => {
+                                        requestedService = 'Otimização de websites';
+                                        HandleStates()
+                                    }
+                                }
+                            >
+                                <Link to="/services/contact">
+                                    Solicitar cotação
+                                </Link>
+                            </Button>
                         </Col>
 
                         <Col md={6}>

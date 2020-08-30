@@ -1,5 +1,4 @@
 import React, { useState, FormEvent } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -21,29 +20,42 @@ import './styles.css';
 
 
 const ContactUs = () => {
-    const history = useHistory();
 
     const [ name, setName ] = useState('');
-    const [ telefone, setTelefone ] = useState('');
-    const [ email, setEmail ] = useState('');
+    const [ phone, setPhone ] = useState('');
+    const [ emailUsr, setEmailUsr ] = useState('');
     const [ message, setMessage ] = useState('');
+
+    //Alert User
+    const [ alertMessage, setAlertMessage ] = useState('');
+    const [ showUserID, setShowUserID ] = useState('CloseUserError-Mail');
+    const [ alertColor, setAlertColor ] = useState({});
 
 
     const HandleMailer = (e: FormEvent) => {
         e.preventDefault();
-        
-        api.post('/send', {
+
+        const subject = 'Nova Solicitação de support'
+        api.post('/api/send', {
+            subject,
             name,
-            telefone,
-            email,
+            phone,
+            emailUsr,
             message
         }).then(() => {
-            alert('Registo feito com sucesso obrigado. Obrigado!');
-
-            history.push('/');
+            setName('')
+            setPhone('')
+            setEmailUsr('')
+            setMessage('')
+            
+            setAlertMessage('Recebemos o seu email, entraremos em contacto.')
+            setShowUserID('')
+            setAlertColor({color: '#0088a9'})
         }).catch(() => {
 
-            alert('erro no cadastro');
+            setAlertMessage('Não foi possível enviar o email. Por favor, tente novamente.')
+            setShowUserID('')
+            setAlertColor({color: '#dc3545'})
         })
     }
 
@@ -59,6 +71,13 @@ const ContactUs = () => {
 
                     <Col md={6}>
                         <form onSubmit= { HandleMailer }>
+
+                            <div id={showUserID} className="showUserError-Mail">
+                                <div style={alertColor}> 
+                                    {alertMessage}
+                                </div>
+                            </div>
+
                             <fieldset>
                                 <Input  
                                     name="name" 
@@ -70,15 +89,15 @@ const ContactUs = () => {
                                 <Input  
                                     name="telefone" 
                                     label="Número de telefone ou celular" 
-                                    value={telefone}
-                                    onChange={(e) => { setTelefone(e.target.value) }}
+                                    value={phone}
+                                    onChange={(e) => { setPhone(e.target.value) }}
                                 />
                                 
                                 <Input  
                                     name="email" 
                                     label="Endereço de email" 
-                                    value={email}
-                                    onChange={(e) => { setEmail(e.target.value) }}
+                                    value={emailUsr}
+                                    onChange={(e) => { setEmailUsr(e.target.value) }}
                                     type="email"
                                 />
                                 <TextArea

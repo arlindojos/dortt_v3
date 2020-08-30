@@ -40,10 +40,16 @@
     margin-top: 6.4rem;
 }
 
-#main-block-GotService form fieldset legend {
+#main-block-GotService form #fieldset-01 legend {
     font: 700 2.4rem Archivo;
     color: var(--color-text-title);
     margin-bottom: 1.4rem;
+    padding-bottom: 0.8rem;
+}
+
+#main-block-GotService form #fieldset-02 legend {
+    font: 700 1.8rem Archivo;
+    color: var(--color-text-title);
     padding-bottom: 0.8rem;
 }
 

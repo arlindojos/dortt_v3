@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-import Button from 'react-bootstrap/esm/Button';
+import React from 'react';
 
 import './styles.css';
 
@@ -19,27 +17,22 @@ export const WhatsappForm = () => {
 
 
 export const AlertMail = () => {
-    const [show, setShow] = useState(true);
-
-    if (show) {
-        return (
-            <div className="robot-notify">
-                <div id="robot">
-                    <i className="fas fa-robot"></i>
-                </div>
-
-                <div id="robot-dot"></div>
-                <div id="robot-message">
-                    <span>
-                        Precisa de um 
-                        <a href="#email-profissional">
-                            <i className="fas fa-angle-double-right"></i>
-                            email Profissional?
-                        </a>
-                    </span>
-                </div>
+    return (
+        <div className="robot-notify">
+            <div id="robot">
+                <i className="fas fa-robot"></i>
             </div>
-        );
-    }
-    return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+            
+            <div id="robot-dot"></div>
+            <div id="robot-message">
+                <span>
+                Precisa de um 
+                <a href="#email-profissional">
+                    <i className="fas fa-angle-double-right"></i>
+                    email Profissional?
+                </a>
+            </span>
+            </div>
+        </div>
+    );
 }
