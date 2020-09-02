@@ -2,7 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { useSelector } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/row';
+import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
@@ -10,7 +10,6 @@ import Button from 'react-bootstrap/Button';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Input from '../../components/Input';
-import Select from '../../components/select';
 import TextArea from '../../components/TextArea';
 import api from '../../services/api';
 
