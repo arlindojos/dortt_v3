@@ -47,7 +47,7 @@
     position: absolute;
     animation-name: showUserMessage;
     animation-fill-mode: forwards;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
     animation-timing-function: ease-out;
     top: -3rem;
 }

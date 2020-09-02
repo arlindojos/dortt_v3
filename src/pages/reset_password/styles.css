@@ -1,52 +1,24 @@
-#main-blockReset {
-    margin-top: 5rem;
-    margin-bottom: 40vh;
-}
-
-#main-blockReset form {
-    padding: 2rem;
-    background-color: var(--color-background);
-    border-radius: 0.3rem;
-}
-
-#main-blockReset form  fieldset legend {
-    font: 700 2.4rem Archivo;
-    color: var(--color-text-title);
-    margin-bottom: 1.4rem;
-    padding-bottom: 0.8rem
-}
-
-#main-blockReset form  fieldset label {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-    color: var(--color-title-in-primary);
-}
-
-#main-blockReset form #ButtonID {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-#main-blockReset form #ButtonID button {
+.ButtonGoTo-LogIn {
+    position: absolute;
+    top: 11rem;
+    right: 20rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    max-width: 250px;
-    height: 36px;
-    background-color: var(--color-primary-dark) !important;
-    color: var(--color-text-in-primary) !important;
-    font-size: 1.6rem;
+    font-weight: bold !important;
+    width: 100px;
+    height: 29px;
+    background-color: #E6E6E6 !important;
+    color: var(--color-primary) !important;
+    font-size: 1.6rem !important;
+    border: none !important;
+    margin-top: 2rem !important;
+    transition: background-color 0.2s;
 }
 
-#main-blockReset form #ButtonID button:hover {
-    background-color: var(--color-primary-lighter) !important;
+.ButtonGoTo-LogIn:hover {
+    background-color: var(--color-primary) !important;
 }
 
-.Link-Container {
-    text-align: end;
-    margin-top: 2rem;
-}
-
-.Link-Container a {
+.ButtonGoTo-LogIn a {
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }

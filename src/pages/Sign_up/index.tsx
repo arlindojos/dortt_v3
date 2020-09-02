@@ -43,7 +43,7 @@ const SignUp = () => {
         e.preventDefault();
 
         if (passwordUsr === cfrPassword) {
-            api.post('/api', {
+            api.post('/user', {
             name,
             surname,
             emailUsr,
@@ -97,8 +97,6 @@ const SignUp = () => {
 
         })
         } else {
-            setPassword('');
-            setCfrPassword('');
             setErrorPassword('As suas senhas não se correspondem');
         }
     }

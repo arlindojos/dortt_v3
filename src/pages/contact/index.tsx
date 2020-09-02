@@ -36,7 +36,7 @@ const ContactUs = () => {
         e.preventDefault();
 
         const subject = 'Nova Solicitação de support'
-        api.post('/api/send', {
+        api.post('/user/send', {
             subject,
             name,
             phone,

@@ -43,7 +43,7 @@ const LogIn = () => {
     const HandleLogs = (e: FormEvent) => {
         e.preventDefault();
 
-        api.post('/api/login', {
+        api.post('/user/login', {
             emailUsr: email,
             passwordUsr: passwordUsr
 
@@ -155,7 +155,7 @@ const LogIn = () => {
                                             />
                                         </Form.Group>
 
-                                        <Link to="/reset_password">Esqueci minha senha</Link>
+                                        <Link to="/forgot_password">Esqueci minha senha</Link>
                                     </div>
 
                                     <div id="buttonID">
